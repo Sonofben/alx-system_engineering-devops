@@ -2,9 +2,3 @@
 owner_name="vincent"
 group_name="staff"
 symbolic_link="_hello"
-if [ -L "$symbolic_link" ]; then
-    chown -h "$owner_name:$group_name" "$symbolic_link"
-    echo "Owner changed to '$owner_name' and group owner changed to '$group_name' for the symbolic link '$symbolic_link'."
-else
-    echo "File '$symbolic_link' is not a symbolic link or not found in the working directory."
-fi
