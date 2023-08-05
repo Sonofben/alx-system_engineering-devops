@@ -1,0 +1,8 @@
+#!/bin/bash
+file_name="hello"
+if [ -f "$file_name" ]; then
+    chmod 755 "$file_name"
+    echo "Mode set for the file '$file_name': -rwxr-x-wx"
+else
+    echo "File '$file_name' not found in the working directory."
+fi
