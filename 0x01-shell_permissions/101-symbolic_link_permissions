@@ -1,4 +1,2 @@
 #!/bin/bash
-owner_name="vincent"
-group_name="staff"
-symbolic_link="_hello"
+chown -h vincent:staff _hello
