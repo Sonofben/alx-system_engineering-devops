@@ -1,0 +1,5 @@
+#!/bin/bash
+owner_name="vincent"
+group_name="staff"
+chown -R "$owner_name:$group_name" ./*
+echo "Owner changed to '$owner_name' and group owner changed to '$group_name' for all files and directories in the working directory."
