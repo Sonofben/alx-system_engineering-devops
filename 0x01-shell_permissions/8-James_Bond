@@ -1,0 +1,8 @@
+#!/bin/bash
+file_name="hello"
+if [ -f "$file_name" ]; then
+    chmod 001 "$file_name"
+    echo "Permissions set: Owner: no permission, Group: no permission, Other users: all permissions for the file '$file_name'."
+else
+    echo "File '$file_name' not found in the working directory."
+fi
