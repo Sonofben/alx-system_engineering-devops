@@ -1,0 +1,4 @@
+#!/bin/bash
+file_name="hello"
+new_owner="betty"
+chown "$new_owner" "$file_name"
