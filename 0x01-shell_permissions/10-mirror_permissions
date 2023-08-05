@@ -1,0 +1,10 @@
+#!/bin/bash
+file_name_hello="hello"
+file_name_olleh="olleh"
+if [ -f "$file_name_hello" ] && [ -f "$file_name_olleh" ]; then
+    permissions=$(stat -c "%a" "$file_name_olleh")
+    chmod "$permissions" "$file_name_hello"
+    echo "Mode of '$file_name_hello' set to the same as '$file_name_olleh': -rwxr-x-wx"
+else
+    echo "Either '$file_name_hello' or '$file_name_olleh' not found in the working directory."
+fi
