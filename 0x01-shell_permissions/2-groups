@@ -1,0 +1,4 @@
+#!/bin/bash
+current_user=$(whoami)
+groups_list=$(groups "$current_user")
+echo "Groups for user $current_user: $groups_list"
