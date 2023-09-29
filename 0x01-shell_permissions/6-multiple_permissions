@@ -1,8 +1,2 @@
 #!/bin/bash
-file_name="hello"
-if [ -f "$file_name" ]; then
-    chmod u+x,g+x,o+r "$file_name"
-    echo "Execute permission added to the owner and group owner, and read permission added to other users for the file '$file_name'."
-else
-    echo "File '$file_name' not found in the working directory."
-fi
+chmod u+x,g+x,o+r hello
