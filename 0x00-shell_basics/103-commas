@@ -1,2 +1,2 @@
 #!/bin/bash
-(find . -maxdepth 1 -type d -printf '%f/, '  find . -maxdepth 1 ! -type d -printf '%f, ') | sed 's/, $/\n/'
+(find . -maxdepth 1 -type d -print0 ; find . -maxdepth 1 ! -type d -print0) | tr '\0' ', ' | sed 's/, $/\n/'
