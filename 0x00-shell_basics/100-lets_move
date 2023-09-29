@@ -1,10 +1,2 @@
 #!/bin/bash
-# Check if /tmp/u directory exists
-if [ ! -d "/tmp/u" ]; then
-  echo "/tmp/u directory not found."
-  exit 1
-fi
-# Loop through files starting with an uppercase letter
-for file in [A-Z]*; do
-  mv "$file" /tmp/u/
-done
+find . -maxdepth 1 -type f -name '[A-Z]*' -exec mv {} /tmp/u \;
